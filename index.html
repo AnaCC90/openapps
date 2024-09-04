@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open iOS App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
+            background-color: #f4f4f4;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 800px;
+            width: 100%;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            background: #ffffff;
+            border-radius: 10px;
+        }
+        p {
+            font-size: 18px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .button {
+            padding: 15px 30px;
+            font-size: 16px;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px;
+            width: 100%;
+            max-width: 300px;
+        }
+        .button:hover {
+            opacity: 0.9;
+        }
+        .button-ios {
+            background-color: #2f5684;
+        }
+        .button-pre {
+            background-color: #9d5eb0;
+        }
+        .button-test {
+            background-color: #f08843;
+        }
+        .button-dev {
+            background-color: #367b51;+
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p>You must have downloaded the corresponding app for the respective button to work</p>
+        <button class="button button-ios" onclick="openApp('vt://login')">Open PROD iOS App</button>
+        <button class="button button-pre" onclick="openApp('vt.pre://login')">Open PRE iOS App</button>
+        <button class="button button-test" onclick="openApp('vt.test://login')">Open TEST iOS App</button>
+        <button class="button button-dev" onclick="openApp('vt.dev://login')">Open DEV iOS App</button>
+    </div>
+    <script>
+        function openApp(url) {
+            window.location.href = url;
+        }
+    </script>
+</body>
+</html>
